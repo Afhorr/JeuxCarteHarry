@@ -8,6 +8,6 @@ namespace Travail3.Repository
 {
     interface iRepositoryCartes
     {
-        Cartes PrendreCartes();
+        Cartes PrendreCarte();
     }
 }
