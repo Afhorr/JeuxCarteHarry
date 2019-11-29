@@ -8,13 +8,13 @@ using MySql.Data.MySqlClient;
 
 namespace Travail3
 {
-    class repositoryJoueur: iRepositoryJoueur
+    class repositoryJoueur : iRepositoryJoueur
     {
         MySqlConnection connexion;
 
         public repositoryJoueur()
         {
-            Connexion.BD = "biblio";
+            Connexion.BD = "jeuharrypotter";
             Connexion.User = "root";
             Connexion.Password = "";
             connexion = Connexion.getInstance();
@@ -26,7 +26,26 @@ namespace Travail3
             {
                 MySqlCommand commandJoueurNom;
                 MySqlDataReader readerJoueurNom;
-                Joueur joueur; 
+                Joueur joueur;
+                joueur = new Joueur();
+                if (connexion != null)
+                {
+                    commandJoueurNom = connexion.CreateCommand();
+                    commandJoueurNom.CommandText = "Select * from titles where Pubid='" + nom + "'";
+                    readerJoueurNom = commandJoueurNom.ExecuteReader();
+                    if (readerJoueurNom.Read())
+                    {
+                        joueur.idJoueur = Convert.ToInt32(readerJoueurNom["idJoueur"]);
+                        joueur.nomJoueur = readerJoueurNom["prenom"].ToString();
+                        joueur.pointsJoueur = Convert.ToInt32(readerJoueurNom["pointsJoueur"]); ;
+                        joueur.idMaison = Convert.ToInt32(readerJoueurNom["idMaison"]);
+
+                    }
+                    readerJoueurNom.Close();
+                }
+                return joueur;
+
+
             }
             catch (Exception e)
             {

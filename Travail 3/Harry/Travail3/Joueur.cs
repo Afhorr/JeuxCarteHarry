@@ -8,10 +8,10 @@ namespace Travail3
 {
     class Joueur
     {
-        private int idJoueur;
-        private string nomJoueur;
-        private int pointsJoueur;
-        private int idMaison;
+        public int idJoueur { get; set; }
+        public string nomJoueur { get; set; }
+        public int pointsJoueur { get; set; }
+        public int idMaison { get; set; }
 
         public Joueur()
         {
