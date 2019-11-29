@@ -20,5 +20,11 @@ namespace Travail3
         {
             return nomCategorie;
         }
+
+        public void AssignerValeurCategorie(int id, string nom)
+        {
+            idCategorie = id;
+            nomCategorie = nom;
+        }
     }
 }

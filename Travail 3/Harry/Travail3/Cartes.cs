@@ -21,6 +21,16 @@ namespace Travail3
             categorieCarte = new Categorie();
         }
 
+        public void AssignerIdentifiantCarte(string identifiant)
+        {
+            identifiantCarte = identifiant;
+        }
+
+        public void AssignerNomCarte(string nom)
+        {
+            nomCarte = nom;
+        }
+
         public void AssignerCategorie(Categorie categorie)
         {
             categorieCarte = categorie;
