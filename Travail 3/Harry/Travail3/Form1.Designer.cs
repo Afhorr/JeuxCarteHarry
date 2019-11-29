@@ -38,6 +38,7 @@
             this.lbl_Joueur4 = new System.Windows.Forms.Label();
             this.txt_RechercheJoueur = new System.Windows.Forms.TextBox();
             this.btn_RechercheJoueur = new System.Windows.Forms.Button();
+            this.btn_JouerCarte = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,11 +122,22 @@
             this.btn_RechercheJoueur.UseVisualStyleBackColor = true;
             this.btn_RechercheJoueur.Click += new System.EventHandler(this.Btn_RechercheJoueur_Click);
             // 
+            // btn_JouerCarte
+            // 
+            this.btn_JouerCarte.Location = new System.Drawing.Point(156, 161);
+            this.btn_JouerCarte.Name = "btn_JouerCarte";
+            this.btn_JouerCarte.Size = new System.Drawing.Size(108, 23);
+            this.btn_JouerCarte.TabIndex = 8;
+            this.btn_JouerCarte.Text = "Jouer";
+            this.btn_JouerCarte.UseVisualStyleBackColor = true;
+            this.btn_JouerCarte.Click += new System.EventHandler(this.Btn_JouerCarte_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 764);
+            this.Controls.Add(this.btn_JouerCarte);
             this.Controls.Add(this.btn_RechercheJoueur);
             this.Controls.Add(this.txt_RechercheJoueur);
             this.Controls.Add(this.lbl_Joueur4);
@@ -156,6 +168,7 @@
         private System.Windows.Forms.Label lbl_Joueur4;
         private System.Windows.Forms.TextBox txt_RechercheJoueur;
         private System.Windows.Forms.Button btn_RechercheJoueur;
+        private System.Windows.Forms.Button btn_JouerCarte;
     }
 }
 

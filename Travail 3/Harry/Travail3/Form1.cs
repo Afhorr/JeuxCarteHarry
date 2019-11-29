@@ -13,6 +13,9 @@ namespace Travail3
     public partial class Form1 : Form
     {
         Controleur gestionJeu;
+
+        List<Label> lesLabelsJoueurs;
+
         public Form1()
         {
 
@@ -27,6 +30,16 @@ namespace Travail3
 
                 MessageBox.Show("le serveur est fermé");
             }
+            gestionJeu = new Controleur();
+            RemplirLabels();
+        }
+
+        public void RemplirLabels()
+        {
+            lesLabelsJoueurs.Add(lbl_Joueur1);
+            lesLabelsJoueurs.Add(lbl_Joueur2);
+            lesLabelsJoueurs.Add(lbl_Joueur3);
+            lesLabelsJoueurs.Add(lbl_Joueur4);
         }
 
         void AbonnerEvenementControleur()
@@ -44,43 +57,30 @@ namespace Travail3
 
         private void Btn_RechercheJoueur_Click(object sender, EventArgs e)
         {
-            try
+            string nomJoueur = gestionJeu.AjouterJoueur(txt_RechercheJoueur.Text);
+            if (nomJoueur != "")
             {
-                gestionJoueur.ChercherNom(txt_RechercheJoueur);
-                afficherJoueur();
+                int positionJoueur = gestionJeu.PositionNouveauJoueur();
+                AfficherJoueur(positionJoueur, nomJoueur);
             }
-            catch (FormatException)
+            else if(nomJoueur == "full")
             {
-
-                MessageBox.Show("Entrez un nom valide");
+                MessageBox.Show("Il y a déjà 4 joueurs dans cette partie.");
+            }
+            else
+            {
+                MessageBox.Show("Joueur non trouvé.");
             }
         }
-        void afficherJoueur()
+
+        private void Btn_JouerCarte_Click(object sender, EventArgs e)
         {
-            ViderLabel();
-            Joueur JoueurCourant;
-            JoueurCourant = gestionJoueur.JoueurCourant;
+            MessageBox.Show(gestionJeu.JouerCarte());
+        }
 
-            for (int LeJoueurCourant = 0; LeJoueurCourant < 4; LeJoueurCourant++)
-            {
-                switch (LeJoueurCourant)
-                {
-                    case 0:
-                        lbl_Joueur1.Text = "Nom: " + JoueurCourant.nomJoueur + "Points: " + JoueurCourant.pointsJoueur.ToString();
-                        break;
-                    case 1:
-                        lbl_Joueur2.Text = "Nom: " + JoueurCourant.nomJoueur + "Points: " + JoueurCourant.pointsJoueur.ToString();
-                        break;
-                    case 2:
-                        lbl_Joueur3.Text = "Nom: " + JoueurCourant.nomJoueur + "Points: " + JoueurCourant.pointsJoueur.ToString();
-                        break;
-                    case 3:
-                        lbl_Joueur4.Text = "Nom: " + JoueurCourant.nomJoueur + "Points: " + JoueurCourant.pointsJoueur.ToString();
-                        break;
-                }
-            } 
-
-            
+        public void AfficherJoueur(int positionJoueur, string nomJoueur)
+        {
+            lesLabelsJoueurs[positionJoueur].Text = nomJoueur;
         }
         void ViderLabel()
         {

@@ -8,11 +8,11 @@ using MySql.Data.MySqlClient;
 
 namespace Travail3.Repository
 {
-    class repositoryCartes: iRepositoryCartes
+    class RepositoryCartes: iRepositoryCartes
     {
         MySqlConnection connexion;
 
-        public repositoryCartes()
+        public RepositoryCartes()
         {
             Connexion.BD = "jeuharrypotter";
             Connexion.User = "root";
