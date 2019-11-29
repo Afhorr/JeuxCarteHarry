@@ -14,7 +14,7 @@ namespace Travail3
     {
         Controleur gestionJeu;
 
-        List<Label> lesLabelsJoueurs;
+        List<Label> lesLabelsJoueurs = new List<Label>();
 
         public Form1()
         {
@@ -46,10 +46,12 @@ namespace Travail3
         {
             gestionJeu.JoueurInexistant += gestion_JoueurNonTrouve;
         }
+
         private void gestion_JoueurNonTrouve(object sender,EventArgs e)
         {
             MessageBox.Show("Joueur inexistant");
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -58,18 +60,15 @@ namespace Travail3
         private void Btn_RechercheJoueur_Click(object sender, EventArgs e)
         {
             string nomJoueur = gestionJeu.AjouterJoueur(txt_RechercheJoueur.Text);
-            if (nomJoueur != "")
-            {
-                int positionJoueur = gestionJeu.PositionNouveauJoueur();
-                AfficherJoueur(positionJoueur, nomJoueur);
-            }
-            else if(nomJoueur == "full")
+            if (nomJoueur == "full")
             {
                 MessageBox.Show("Il y a déjà 4 joueurs dans cette partie.");
             }
-            else
+            else if (nomJoueur != "")
             {
-                MessageBox.Show("Joueur non trouvé.");
+
+                int positionJoueur = gestionJeu.PositionNouveauJoueur();
+                AfficherJoueur(positionJoueur, nomJoueur);
             }
         }
 
@@ -82,6 +81,7 @@ namespace Travail3
         {
             lesLabelsJoueurs[positionJoueur].Text = nomJoueur;
         }
+
         void ViderLabel()
         {
             lbl_Joueur1.Text = "";

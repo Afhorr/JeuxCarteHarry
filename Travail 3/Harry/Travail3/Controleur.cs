@@ -11,9 +11,9 @@ namespace Travail3
     {
         Cartes carteCourante;
         Joueur joueurCourant;
-        List<Joueur> lesJoueurs;
+        List<Joueur> lesJoueurs = new List<Joueur>();
         RepositoryCartes leRepositoryCartes;
-        repositoryJoueur leRepositoryJoueur;
+        RepositoryJoueur leRepositoryJoueur;
 
         public Joueur JoueurCourant
         {
@@ -31,6 +31,7 @@ namespace Travail3
         {
             carteCourante = null;
             leRepositoryCartes = new RepositoryCartes();
+            leRepositoryJoueur = new RepositoryJoueur();
         }
 
         /*public void ChercherNom(string nom)
@@ -53,7 +54,7 @@ namespace Travail3
                 joueurCourant = leRepositoryJoueur.ChercherParNom(nomJoueur);
                 if (joueurCourant.idJoueur == 0)
                 {
-                    return "";
+                    JoueurInexistant(this, new EventArgs());
                 }
                 lesJoueurs.Add(joueurCourant);
                 return joueurCourant.nomJoueur;

@@ -8,11 +8,11 @@ using MySql.Data.MySqlClient;
 
 namespace Travail3
 {
-    class repositoryJoueur : iRepositoryJoueur
+    class RepositoryJoueur : iRepositoryJoueur
     {
         MySqlConnection connexion;
 
-        public repositoryJoueur()
+        public RepositoryJoueur()
         {
             Connexion.BD = "jeuharrypotter";
             Connexion.User = "root";
@@ -31,7 +31,7 @@ namespace Travail3
                 if (connexion != null)
                 {
                     commandJoueurNom = connexion.CreateCommand();
-                    commandJoueurNom.CommandText = "Select * from titles where Pubid='" + nom + "'";
+                    commandJoueurNom.CommandText = "SELECT * FROM joueurs WHERE prenom='" + nom + "'";
                     readerJoueurNom = commandJoueurNom.ExecuteReader();
                     if (readerJoueurNom.Read())
                     {
