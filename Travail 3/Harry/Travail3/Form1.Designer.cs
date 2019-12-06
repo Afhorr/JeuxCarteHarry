@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_pointsJoueur1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_pointsJoueur2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_pointsJoueur3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_pointsJoueur4 = new System.Windows.Forms.Label();
             this.lbl_Joueur1 = new System.Windows.Forms.Label();
             this.lbl_Joueur2 = new System.Windows.Forms.Label();
             this.lbl_Joueur3 = new System.Windows.Forms.Label();
@@ -39,10 +43,6 @@
             this.txt_RechercheJoueur = new System.Windows.Forms.TextBox();
             this.btn_RechercheJoueur = new System.Windows.Forms.Button();
             this.btn_JouerCarte = new System.Windows.Forms.Button();
-            this.lbl_pointsJoueur2 = new System.Windows.Forms.Label();
-            this.lbl_pointsJoueur1 = new System.Windows.Forms.Label();
-            this.lbl_pointsJoueur3 = new System.Windows.Forms.Label();
-            this.lbl_pointsJoueur4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -57,6 +57,14 @@
             this.panel1.Size = new System.Drawing.Size(130, 181);
             this.panel1.TabIndex = 0;
             // 
+            // lbl_pointsJoueur1
+            // 
+            this.lbl_pointsJoueur1.AutoSize = true;
+            this.lbl_pointsJoueur1.Location = new System.Drawing.Point(5, 13);
+            this.lbl_pointsJoueur1.Name = "lbl_pointsJoueur1";
+            this.lbl_pointsJoueur1.Size = new System.Drawing.Size(0, 13);
+            this.lbl_pointsJoueur1.TabIndex = 10;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lbl_pointsJoueur2);
@@ -64,6 +72,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 130);
             this.panel2.TabIndex = 1;
+            // 
+            // lbl_pointsJoueur2
+            // 
+            this.lbl_pointsJoueur2.AutoSize = true;
+            this.lbl_pointsJoueur2.Location = new System.Drawing.Point(3, 12);
+            this.lbl_pointsJoueur2.Name = "lbl_pointsJoueur2";
+            this.lbl_pointsJoueur2.Size = new System.Drawing.Size(0, 13);
+            this.lbl_pointsJoueur2.TabIndex = 9;
             // 
             // panel3
             // 
@@ -73,6 +89,14 @@
             this.panel3.Size = new System.Drawing.Size(130, 181);
             this.panel3.TabIndex = 1;
             // 
+            // lbl_pointsJoueur3
+            // 
+            this.lbl_pointsJoueur3.AutoSize = true;
+            this.lbl_pointsJoueur3.Location = new System.Drawing.Point(14, 16);
+            this.lbl_pointsJoueur3.Name = "lbl_pointsJoueur3";
+            this.lbl_pointsJoueur3.Size = new System.Drawing.Size(0, 13);
+            this.lbl_pointsJoueur3.TabIndex = 11;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.lbl_pointsJoueur4);
@@ -80,6 +104,14 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(181, 130);
             this.panel4.TabIndex = 1;
+            // 
+            // lbl_pointsJoueur4
+            // 
+            this.lbl_pointsJoueur4.AutoSize = true;
+            this.lbl_pointsJoueur4.Location = new System.Drawing.Point(13, 12);
+            this.lbl_pointsJoueur4.Name = "lbl_pointsJoueur4";
+            this.lbl_pointsJoueur4.Size = new System.Drawing.Size(0, 13);
+            this.lbl_pointsJoueur4.TabIndex = 12;
             // 
             // lbl_Joueur1
             // 
@@ -132,6 +164,7 @@
             // 
             // btn_JouerCarte
             // 
+            this.btn_JouerCarte.Enabled = false;
             this.btn_JouerCarte.Location = new System.Drawing.Point(156, 161);
             this.btn_JouerCarte.Name = "btn_JouerCarte";
             this.btn_JouerCarte.Size = new System.Drawing.Size(108, 23);
@@ -139,38 +172,6 @@
             this.btn_JouerCarte.Text = "Jouer";
             this.btn_JouerCarte.UseVisualStyleBackColor = true;
             this.btn_JouerCarte.Click += new System.EventHandler(this.Btn_JouerCarte_Click);
-            // 
-            // lbl_pointsJoueur2
-            // 
-            this.lbl_pointsJoueur2.AutoSize = true;
-            this.lbl_pointsJoueur2.Location = new System.Drawing.Point(3, 12);
-            this.lbl_pointsJoueur2.Name = "lbl_pointsJoueur2";
-            this.lbl_pointsJoueur2.Size = new System.Drawing.Size(0, 13);
-            this.lbl_pointsJoueur2.TabIndex = 9;
-            // 
-            // lbl_pointsJoueur1
-            // 
-            this.lbl_pointsJoueur1.AutoSize = true;
-            this.lbl_pointsJoueur1.Location = new System.Drawing.Point(5, 13);
-            this.lbl_pointsJoueur1.Name = "lbl_pointsJoueur1";
-            this.lbl_pointsJoueur1.Size = new System.Drawing.Size(0, 13);
-            this.lbl_pointsJoueur1.TabIndex = 10;
-            // 
-            // lbl_pointsJoueur3
-            // 
-            this.lbl_pointsJoueur3.AutoSize = true;
-            this.lbl_pointsJoueur3.Location = new System.Drawing.Point(14, 16);
-            this.lbl_pointsJoueur3.Name = "lbl_pointsJoueur3";
-            this.lbl_pointsJoueur3.Size = new System.Drawing.Size(0, 13);
-            this.lbl_pointsJoueur3.TabIndex = 11;
-            // 
-            // lbl_pointsJoueur4
-            // 
-            this.lbl_pointsJoueur4.AutoSize = true;
-            this.lbl_pointsJoueur4.Location = new System.Drawing.Point(13, 12);
-            this.lbl_pointsJoueur4.Name = "lbl_pointsJoueur4";
-            this.lbl_pointsJoueur4.Size = new System.Drawing.Size(0, 13);
-            this.lbl_pointsJoueur4.TabIndex = 12;
             // 
             // Form1
             // 

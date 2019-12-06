@@ -33,6 +33,7 @@ namespace Travail3
             }
             gestionJeu = new Controleur();
             RemplirLabels();
+            AfficherJoueurCourant();
         }
 
         public void RemplirLabels()
@@ -76,12 +77,15 @@ namespace Travail3
                 int positionJoueur = gestionJeu.PositionNouveauJoueur();
                 AfficherJoueur(positionJoueur, nomJoueur);
             }
+            SetupPlayer();
         }
 
         private void Btn_JouerCarte_Click(object sender, EventArgs e)
         {
 
             //MessageBox.Show(gestionJeu.JouerCarte());
+            gestionJeu.ChangerDeTour();
+            AfficherJoueurCourant();
         }
 
         public void AfficherJoueur(int positionJoueur, string nomJoueur)
@@ -91,7 +95,20 @@ namespace Travail3
 
         public void AfficherJoueurCourant()
         {
+            lbl_Joueur1.BackColor = Control.DefaultBackColor;
+            lbl_Joueur2.BackColor = Control.DefaultBackColor;
+            lbl_Joueur3.BackColor = Control.DefaultBackColor;
+            lbl_Joueur4.BackColor = Control.DefaultBackColor;
 
+            lesLabelsJoueurs[gestionJeu.ObtenirJoueurCourant()].BackColor = Color.Red;
+            
+        }
+        public void SetupPlayer()
+        {
+            if (lesLabelsJoueurs[3].Text != "")
+            {
+                btn_JouerCarte.Enabled = true;
+            }
         }
 
         void ViderLabel()
@@ -100,6 +117,11 @@ namespace Travail3
             lbl_Joueur2.Text = "";
             lbl_Joueur3.Text = "";
             lbl_Joueur4.Text = "";
+        }
+
+        private void Btn_Start_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

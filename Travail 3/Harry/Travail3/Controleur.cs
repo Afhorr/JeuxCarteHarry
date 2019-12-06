@@ -89,10 +89,6 @@ namespace Travail3
         {
             return lesJoueurs.Count() - 1;
         }
-
-<<<<<<< HEAD
-
-=======
         public int ObtenirJoueurCourant()
         {
             return indexJoueurCourant;
@@ -108,6 +104,6 @@ namespace Travail3
             indexJoueurCourant = ((indexJoueurCourant + 1) % 4);
             joueurCourant = lesJoueurs[indexJoueurCourant];
         }
->>>>>>> 4bf2c5548e54b37a236bc0553071012648e54f67
+
     }
 }
