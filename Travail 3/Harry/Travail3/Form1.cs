@@ -81,7 +81,7 @@ namespace Travail3
         private void Btn_JouerCarte_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show(gestionJeu.JouerCarte());
+            //MessageBox.Show(gestionJeu.JouerCarte());
         }
 
         public void AfficherJoueur(int positionJoueur, string nomJoueur)
