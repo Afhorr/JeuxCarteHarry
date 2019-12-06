@@ -89,6 +89,11 @@ namespace Travail3
             lesLabelsJoueurs[positionJoueur].Text = nomJoueur;
         }
 
+        public void AfficherJoueurCourant()
+        {
+
+        }
+
         void ViderLabel()
         {
             lbl_Joueur1.Text = "";

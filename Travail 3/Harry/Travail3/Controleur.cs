@@ -69,5 +69,7 @@ namespace Travail3
         {
             return lesJoueurs.Count() - 1;
         }
+
+
     }
 }
