@@ -44,10 +44,10 @@ namespace Travail3
             lesLabelsJoueurs.Add(lbl_Joueur3);
             lesLabelsJoueurs.Add(lbl_Joueur4);
 
-            lesLabelsPoints.Add(lbl_pointsJoueur1);
-            lesLabelsPoints.Add(lbl_pointsJoueur2);
-            lesLabelsPoints.Add(lbl_pointsJoueur3);
-            lesLabelsPoints.Add(lbl_pointsJoueur4);
+            //lesLabelsPoints.Add(lbl_pointsJoueur1);
+            //lesLabelsPoints.Add(lbl_pointsJoueur2);
+            //lesLabelsPoints.Add(lbl_pointsJoueur3);
+            //esLabelsPoints.Add(lbl_pointsJoueur4);
 
             lesBouttonsAttaque.Add(btn_Joueur1);
             lesBouttonsAttaque.Add(btn_Joueur2);
@@ -120,8 +120,19 @@ namespace Travail3
             lbl_Joueur4.BackColor = Control.DefaultBackColor;
 
             lesLabelsJoueurs[gestionJeu.ObtenirJoueurCourant()].BackColor = Color.Red;
+            EnableButtons();
+            lesBouttonsAttaque[gestionJeu.ObtenirJoueurCourant()].Enabled = false;
             
         }
+
+        private void EnableButtons()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                lesBouttonsAttaque[i].Enabled = true;
+            }
+        }
+
         public void SetupPlayer()
         {
             if (lesLabelsJoueurs[3].Text != "")
@@ -146,6 +157,51 @@ namespace Travail3
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Btn_Joueur1_Click(object sender, EventArgs e)
+        {
+            JouerCarte(1);
+        }
+
+
+        private void JouerCarte(int indexCible)
+        {
+            gestionJeu.JouerCarte();
+            AfficherInfoCarte();
+            InfligerDegats(indexCible);
+            gestionJeu.ChangerDeTour();
+            AfficherJoueurCourant();
+        }
+
+        private void InfligerDegats(int indexCible)
+        {
+            if (gestionJeu.TypeCarteCourante() == "Attaque")
+            {
+                gestionJeu.InfligerDegats(indexCible);
+                gestionJeu.UtiliserAntidote(indexCible);
+            }
+            else
+            {
+                gestionJeu.ProtegerJoueur();
+                gestionJeu.AffaiblirAdverse(indexCible);
+                gestionJeu.UtiliserAntidote(indexCible);
+            }
+        }
+
+        private void Btn_Joueur2_Click(object sender, EventArgs e)
+        {
+            JouerCarte(2);
+        }
+
+        private void Btn_Joueur3_Click(object sender, EventArgs e)
+        {
+            JouerCarte(3);
+        }
+
+        private void Btn_Joueur4_Click(object sender, EventArgs e)
+        {
+            JouerCarte(4);
         }
     }
 }

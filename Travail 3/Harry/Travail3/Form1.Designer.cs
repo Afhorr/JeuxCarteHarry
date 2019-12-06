@@ -243,6 +243,7 @@
             this.btn_Joueur1.TabIndex = 14;
             this.btn_Joueur1.Text = "Attaquer";
             this.btn_Joueur1.UseVisualStyleBackColor = true;
+            this.btn_Joueur1.Click += new System.EventHandler(this.Btn_Joueur1_Click);
             // 
             // btn_Joueur2
             // 
@@ -252,6 +253,7 @@
             this.btn_Joueur2.TabIndex = 15;
             this.btn_Joueur2.Text = "Attaquer";
             this.btn_Joueur2.UseVisualStyleBackColor = true;
+            this.btn_Joueur2.Click += new System.EventHandler(this.Btn_Joueur2_Click);
             // 
             // btn_Joueur3
             // 
@@ -261,6 +263,7 @@
             this.btn_Joueur3.TabIndex = 16;
             this.btn_Joueur3.Text = "Attaquer";
             this.btn_Joueur3.UseVisualStyleBackColor = true;
+            this.btn_Joueur3.Click += new System.EventHandler(this.Btn_Joueur3_Click);
             // 
             // btn_Joueur4
             // 
@@ -270,6 +273,7 @@
             this.btn_Joueur4.TabIndex = 17;
             this.btn_Joueur4.Text = "Attaquer";
             this.btn_Joueur4.UseVisualStyleBackColor = true;
+            this.btn_Joueur4.Click += new System.EventHandler(this.Btn_Joueur4_Click);
             // 
             // lbl_NomAntidote
             // 
