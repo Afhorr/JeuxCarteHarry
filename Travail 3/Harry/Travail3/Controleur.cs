@@ -54,7 +54,12 @@ namespace Travail3
             }
         }
 
-        public int AntidoteCarteCourante()
+        public string NomAntidoteCarteCourante()
+        {
+            return carteCourante.RecupererNomAntidote();
+        }
+
+        public int ValeurAntidoteCarteCourante()
         {
             return carteCourante.RecupererValeurAntidote();
         }

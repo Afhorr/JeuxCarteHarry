@@ -16,6 +16,7 @@ namespace Travail3
 
         List<Label> lesLabelsJoueurs = new List<Label>();
         List<Label> lesLabelsPoints = new List<Label>();
+        List<Button> lesBouttonsAttaque = new List<Button>();
 
         public Form1()
         {
@@ -32,11 +33,11 @@ namespace Travail3
                 MessageBox.Show("le serveur est fermé");
             }
             gestionJeu = new Controleur();
-            RemplirLabels();
+            RemplirListes();
             AfficherJoueurCourant();
         }
 
-        public void RemplirLabels()
+        public void RemplirListes()
         {
             lesLabelsJoueurs.Add(lbl_Joueur1);
             lesLabelsJoueurs.Add(lbl_Joueur2);
@@ -47,6 +48,11 @@ namespace Travail3
             lesLabelsPoints.Add(lbl_pointsJoueur2);
             lesLabelsPoints.Add(lbl_pointsJoueur3);
             lesLabelsPoints.Add(lbl_pointsJoueur4);
+
+            lesBouttonsAttaque.Add(btn_Joueur1);
+            lesBouttonsAttaque.Add(btn_Joueur2);
+            lesBouttonsAttaque.Add(btn_Joueur3);
+            lesBouttonsAttaque.Add(btn_Joueur4);
         }
 
         void AbonnerEvenementControleur()
@@ -84,6 +90,8 @@ namespace Travail3
         {
             gestionJeu.JouerCarte();
             AfficherInfoCarte();
+            gestionJeu.ChangerDeTour();
+            AfficherJoueurCourant();
         }
 
         public void AfficherInfoCarte()
@@ -93,6 +101,8 @@ namespace Travail3
             lbl_AttaqueCarte.Text = "Points d'attaque: " + gestionJeu.AttaqueCarteCourante();
             lbl_DefenseCarte.Text = "Points de défense: " + gestionJeu.DefenseCarteCourante();
             lbl_TypeCarte.Text = "Type: " + gestionJeu.TypeCarteCourante();
+            lbl_NomAntidote.Text = "Nom antidote: " + gestionJeu.NomAntidoteCarteCourante();
+            lbl_ValeurAntidote.Text = "Valeur antidote: " + gestionJeu.ValeurAntidoteCarteCourante();
         }
 
         public void AfficherJoueur(int positionJoueur, string nomJoueur, int pointsJoueur)

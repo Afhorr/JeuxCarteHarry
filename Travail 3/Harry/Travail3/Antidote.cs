@@ -26,5 +26,10 @@ namespace Travail3
         {
             return pointsAntidote;
         }
+
+        public string RecupererNom()
+        {
+            return nomAntidote;
+        }
     }
 }

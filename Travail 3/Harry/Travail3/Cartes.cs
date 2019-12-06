@@ -56,6 +56,11 @@ namespace Travail3
             return antidote.RecupererValeur();
         }
 
+        public string RecupererNomAntidote()
+        {
+            return antidote.RecupererNom();
+        }
+
         public virtual void AssignerAttaque(int min, int max)
         {
 
