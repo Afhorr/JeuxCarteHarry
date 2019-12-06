@@ -11,6 +11,7 @@ namespace Travail3
     {
         Cartes carteCourante;
         Joueur joueurCourant;
+        int indexJoueurCourant = 0;
         List<Joueur> lesJoueurs = new List<Joueur>();
         RepositoryCartes leRepositoryCartes;
         RepositoryJoueur leRepositoryJoueur;
@@ -21,9 +22,28 @@ namespace Travail3
         }
 
         public event EventHandler JoueurInexistant;
-        public string JouerCarte()
+        public void JouerCarte()
         {
             carteCourante = leRepositoryCartes.PrendreCarte();
+        }
+
+        public int AttaqueCarteCourante()
+        {
+            return carteCourante.RecupererAttaque();
+        }
+
+        public int DefenseCarteCourante()
+        {
+            return carteCourante.RecupererDefense();
+        }
+
+        public int AntidoteCarteCourante()
+        {
+            return carteCourante.RecupererValeurAntidote();
+        }
+
+        public string CategorieCarteCourante()
+        {
             return carteCourante.RecupererNomCategorie();
         }
 
@@ -70,6 +90,24 @@ namespace Travail3
             return lesJoueurs.Count() - 1;
         }
 
+<<<<<<< HEAD
 
+=======
+        public int ObtenirJoueurCourant()
+        {
+            return indexJoueurCourant;
+        }
+
+        public void DebutJeu()
+        {
+            joueurCourant = lesJoueurs[indexJoueurCourant];
+        }
+
+        public void ChangerDeTour()
+        {
+            indexJoueurCourant = ((indexJoueurCourant + 1) % 4);
+            joueurCourant = lesJoueurs[indexJoueurCourant];
+        }
+>>>>>>> 4bf2c5548e54b37a236bc0553071012648e54f67
     }
 }
