@@ -169,6 +169,7 @@
             // 
             // btn_JouerCarte
             // 
+            this.btn_JouerCarte.Enabled = false;
             this.btn_JouerCarte.Location = new System.Drawing.Point(156, 161);
             this.btn_JouerCarte.Name = "btn_JouerCarte";
             this.btn_JouerCarte.Size = new System.Drawing.Size(108, 23);

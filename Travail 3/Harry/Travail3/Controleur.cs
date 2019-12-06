@@ -106,7 +106,6 @@ namespace Travail3
         {
             return lesJoueurs.Count() - 1;
         }
-
         public int ObtenirJoueurCourant()
         {
             return indexJoueurCourant;
