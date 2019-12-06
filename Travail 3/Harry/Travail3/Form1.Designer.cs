@@ -39,10 +39,19 @@
             this.txt_RechercheJoueur = new System.Windows.Forms.TextBox();
             this.btn_RechercheJoueur = new System.Windows.Forms.Button();
             this.btn_JouerCarte = new System.Windows.Forms.Button();
+            this.lbl_pointsJoueur2 = new System.Windows.Forms.Label();
+            this.lbl_pointsJoueur1 = new System.Windows.Forms.Label();
+            this.lbl_pointsJoueur3 = new System.Windows.Forms.Label();
+            this.lbl_pointsJoueur4 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbl_pointsJoueur1);
             this.panel1.Location = new System.Drawing.Point(1035, 471);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(130, 181);
@@ -50,6 +59,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lbl_pointsJoueur2);
             this.panel2.Location = new System.Drawing.Point(635, 257);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 130);
@@ -57,6 +67,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lbl_pointsJoueur3);
             this.panel3.Location = new System.Drawing.Point(1043, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(130, 181);
@@ -64,6 +75,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.lbl_pointsJoueur4);
             this.panel4.Location = new System.Drawing.Point(1350, 257);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(181, 130);
@@ -74,36 +86,32 @@
             this.lbl_Joueur1.AutoSize = true;
             this.lbl_Joueur1.Location = new System.Drawing.Point(1035, 439);
             this.lbl_Joueur1.Name = "lbl_Joueur1";
-            this.lbl_Joueur1.Size = new System.Drawing.Size(45, 13);
+            this.lbl_Joueur1.Size = new System.Drawing.Size(0, 13);
             this.lbl_Joueur1.TabIndex = 2;
-            this.lbl_Joueur1.Text = "Joueur1";
             // 
             // lbl_Joueur2
             // 
             this.lbl_Joueur2.AutoSize = true;
             this.lbl_Joueur2.Location = new System.Drawing.Point(781, 241);
             this.lbl_Joueur2.Name = "lbl_Joueur2";
-            this.lbl_Joueur2.Size = new System.Drawing.Size(45, 13);
+            this.lbl_Joueur2.Size = new System.Drawing.Size(0, 13);
             this.lbl_Joueur2.TabIndex = 3;
-            this.lbl_Joueur2.Text = "Joueur2";
             // 
             // lbl_Joueur3
             // 
             this.lbl_Joueur3.AutoSize = true;
             this.lbl_Joueur3.Location = new System.Drawing.Point(1040, 208);
             this.lbl_Joueur3.Name = "lbl_Joueur3";
-            this.lbl_Joueur3.Size = new System.Drawing.Size(45, 13);
+            this.lbl_Joueur3.Size = new System.Drawing.Size(0, 13);
             this.lbl_Joueur3.TabIndex = 4;
-            this.lbl_Joueur3.Text = "Joueur3";
             // 
             // lbl_Joueur4
             // 
             this.lbl_Joueur4.AutoSize = true;
             this.lbl_Joueur4.Location = new System.Drawing.Point(1347, 241);
             this.lbl_Joueur4.Name = "lbl_Joueur4";
-            this.lbl_Joueur4.Size = new System.Drawing.Size(51, 13);
+            this.lbl_Joueur4.Size = new System.Drawing.Size(0, 13);
             this.lbl_Joueur4.TabIndex = 5;
-            this.lbl_Joueur4.Text = "Joueuer4";
             // 
             // txt_RechercheJoueur
             // 
@@ -132,6 +140,38 @@
             this.btn_JouerCarte.UseVisualStyleBackColor = true;
             this.btn_JouerCarte.Click += new System.EventHandler(this.Btn_JouerCarte_Click);
             // 
+            // lbl_pointsJoueur2
+            // 
+            this.lbl_pointsJoueur2.AutoSize = true;
+            this.lbl_pointsJoueur2.Location = new System.Drawing.Point(3, 12);
+            this.lbl_pointsJoueur2.Name = "lbl_pointsJoueur2";
+            this.lbl_pointsJoueur2.Size = new System.Drawing.Size(0, 13);
+            this.lbl_pointsJoueur2.TabIndex = 9;
+            // 
+            // lbl_pointsJoueur1
+            // 
+            this.lbl_pointsJoueur1.AutoSize = true;
+            this.lbl_pointsJoueur1.Location = new System.Drawing.Point(5, 13);
+            this.lbl_pointsJoueur1.Name = "lbl_pointsJoueur1";
+            this.lbl_pointsJoueur1.Size = new System.Drawing.Size(0, 13);
+            this.lbl_pointsJoueur1.TabIndex = 10;
+            // 
+            // lbl_pointsJoueur3
+            // 
+            this.lbl_pointsJoueur3.AutoSize = true;
+            this.lbl_pointsJoueur3.Location = new System.Drawing.Point(14, 16);
+            this.lbl_pointsJoueur3.Name = "lbl_pointsJoueur3";
+            this.lbl_pointsJoueur3.Size = new System.Drawing.Size(0, 13);
+            this.lbl_pointsJoueur3.TabIndex = 11;
+            // 
+            // lbl_pointsJoueur4
+            // 
+            this.lbl_pointsJoueur4.AutoSize = true;
+            this.lbl_pointsJoueur4.Location = new System.Drawing.Point(13, 12);
+            this.lbl_pointsJoueur4.Name = "lbl_pointsJoueur4";
+            this.lbl_pointsJoueur4.Size = new System.Drawing.Size(0, 13);
+            this.lbl_pointsJoueur4.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +191,14 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +217,10 @@
         private System.Windows.Forms.TextBox txt_RechercheJoueur;
         private System.Windows.Forms.Button btn_RechercheJoueur;
         private System.Windows.Forms.Button btn_JouerCarte;
+        private System.Windows.Forms.Label lbl_pointsJoueur1;
+        private System.Windows.Forms.Label lbl_pointsJoueur2;
+        private System.Windows.Forms.Label lbl_pointsJoueur3;
+        private System.Windows.Forms.Label lbl_pointsJoueur4;
     }
 }
 

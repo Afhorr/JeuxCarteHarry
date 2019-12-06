@@ -15,6 +15,7 @@ namespace Travail3
         Controleur gestionJeu;
 
         List<Label> lesLabelsJoueurs = new List<Label>();
+        List<Label> lesLabelsPoints = new List<Label>();
 
         public Form1()
         {
@@ -40,6 +41,11 @@ namespace Travail3
             lesLabelsJoueurs.Add(lbl_Joueur2);
             lesLabelsJoueurs.Add(lbl_Joueur3);
             lesLabelsJoueurs.Add(lbl_Joueur4);
+
+            lesLabelsPoints.Add(lbl_pointsJoueur1);
+            lesLabelsPoints.Add(lbl_pointsJoueur2);
+            lesLabelsPoints.Add(lbl_pointsJoueur3);
+            lesLabelsPoints.Add(lbl_pointsJoueur4);
         }
 
         void AbonnerEvenementControleur()
@@ -74,6 +80,7 @@ namespace Travail3
 
         private void Btn_JouerCarte_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show(gestionJeu.JouerCarte());
         }
 
