@@ -103,11 +103,12 @@ namespace Travail3
             lbl_TypeCarte.Text = "Type: " + gestionJeu.TypeCarteCourante();
             lbl_NomAntidote.Text = "Nom antidote: " + gestionJeu.NomAntidoteCarteCourante();
             lbl_ValeurAntidote.Text = "Valeur antidote: " + gestionJeu.ValeurAntidoteCarteCourante();
+            
         }
 
         public void AfficherJoueur(int positionJoueur, string nomJoueur, int pointsJoueur)
         {
-            lesLabelsJoueurs[positionJoueur].Text = nomJoueur;
+            lesLabelsJoueurs[positionJoueur].Text = "Nom: " + nomJoueur;
             lesLabelsPoints[positionJoueur].Text = "Points: " + pointsJoueur.ToString();
         }
 
