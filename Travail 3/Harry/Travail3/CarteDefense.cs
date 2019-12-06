@@ -26,7 +26,13 @@ namespace Travail3
 
         public override int RecupererDefense()
         {
-            return pointsDefense;
+            Random random = new Random();
+            return pointsDefense * random.Next(2, 4);
+        }
+
+        public override int RecupererDefenseReduite()
+        {
+            return pointsDefense / 2;
         }
     }
 }

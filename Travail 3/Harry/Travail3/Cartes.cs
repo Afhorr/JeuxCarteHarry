@@ -80,5 +80,10 @@ namespace Travail3
         {
             return 0;
         }
+
+        public virtual int RecupererDefenseReduite()
+        {
+            return 0;
+        }
     }
 }

@@ -20,5 +20,10 @@ namespace Travail3
             pointsJoueur = 0;
             idMaison = 0;
         }
+
+        public void ChangerPoints(int points)
+        {
+            pointsJoueur += points;
+        }
     }
 }

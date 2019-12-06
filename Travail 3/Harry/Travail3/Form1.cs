@@ -44,10 +44,10 @@ namespace Travail3
             lesLabelsJoueurs.Add(lbl_Joueur3);
             lesLabelsJoueurs.Add(lbl_Joueur4);
 
-            //lesLabelsPoints.Add(lbl_pointsJoueur1);
-            //lesLabelsPoints.Add(lbl_pointsJoueur2);
-            //lesLabelsPoints.Add(lbl_pointsJoueur3);
-            //esLabelsPoints.Add(lbl_pointsJoueur4);
+            lesLabelsPoints.Add(lbl_pointsJoueur1);
+            lesLabelsPoints.Add(lbl_pointsJoueur2);
+            lesLabelsPoints.Add(lbl_pointsJoueur3);
+            lesLabelsPoints.Add(lbl_pointsJoueur4);
 
             lesBouttonsAttaque.Add(btn_Joueur1);
             lesBouttonsAttaque.Add(btn_Joueur2);
@@ -67,7 +67,15 @@ namespace Travail3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            DisableButtons();
+        }
 
+        public void DisableButtons()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                lesBouttonsAttaque[i].Enabled = false;
+            }
         }
 
         private void Btn_RechercheJoueur_Click(object sender, EventArgs e)
@@ -135,10 +143,11 @@ namespace Travail3
 
         public void SetupPlayer()
         {
-            if (lesLabelsJoueurs[3].Text != "")
+            if (gestionJeu.PositionNouveauJoueur() == 3)
             {
-                btn_JouerCarte.Enabled = true;
-            }
+                btn_RechercheJoueur.Enabled = false;
+                EnableButtons();
+                btn_Joueur1.Enabled = false;           }
         }
 
         void ViderLabel()
@@ -161,7 +170,7 @@ namespace Travail3
 
         private void Btn_Joueur1_Click(object sender, EventArgs e)
         {
-            JouerCarte(1);
+            JouerCarte(0);
         }
 
 
@@ -170,8 +179,15 @@ namespace Travail3
             gestionJeu.JouerCarte();
             AfficherInfoCarte();
             InfligerDegats(indexCible);
+            AfficherPoints(indexCible);
             gestionJeu.ChangerDeTour();
             AfficherJoueurCourant();
+        }
+
+        private void AfficherPoints(int indexCible)
+        {
+            lesLabelsPoints[gestionJeu.ObtenirJoueurCourant()].Text = "Points: " + gestionJeu.RecupererPointsJoueur(gestionJeu.ObtenirJoueurCourant());
+            lesLabelsPoints[indexCible].Text = "Points: " + gestionJeu.RecupererPointsJoueur(indexCible);
         }
 
         private void InfligerDegats(int indexCible)
@@ -191,17 +207,17 @@ namespace Travail3
 
         private void Btn_Joueur2_Click(object sender, EventArgs e)
         {
-            JouerCarte(2);
+            JouerCarte(1);
         }
 
         private void Btn_Joueur3_Click(object sender, EventArgs e)
         {
-            JouerCarte(3);
+            JouerCarte(2);
         }
 
         private void Btn_Joueur4_Click(object sender, EventArgs e)
         {
-            JouerCarte(4);
+            JouerCarte(3);
         }
     }
 }

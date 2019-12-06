@@ -69,25 +69,12 @@ namespace Travail3
             return carteCourante.RecupererNomCategorie();
         }
 
-        public Controleur()
+        public Controleur() 
         {
             carteCourante = null;
             leRepositoryCartes = new RepositoryCartes();
             leRepositoryJoueur = new RepositoryJoueur();
         }
-
-        /*public void ChercherNom(string nom)
-        {
-            if (lesJoueurs.Count < 4)
-            {
-                joueurCourant = leRepositoryJoueur.ChercherParNom(nom);
-                lesJoueurs.Add(joueurCourant);
-                if (joueurCourant.idJoueur == 0)
-                {
-                    JoueurInexistant(this, new EventArgs());
-                }
-            }
-        }*/
 
         public string AjouterJoueur(string nomJoueur)
         {
@@ -98,6 +85,7 @@ namespace Travail3
                 {
                     JoueurInexistant(this, new EventArgs());
                 }
+                joueurCourant.ChangerPoints(50);
                 lesJoueurs.Add(joueurCourant);
                 return joueurCourant.nomJoueur;
             }
@@ -130,6 +118,26 @@ namespace Travail3
         public int RecupererPointsJoueur(int positionJoueur)
         {
             return lesJoueurs[positionJoueur].pointsJoueur;
+        }
+
+        public void InfligerDegats(int indexCible)
+        {
+            lesJoueurs[indexCible].ChangerPoints(-carteCourante.RecupererAttaque());
+        }
+
+        public void UtiliserAntidote(int indexCible)
+        {
+            lesJoueurs[indexCible].ChangerPoints(carteCourante.RecupererValeurAntidote());
+        }
+
+        public void ProtegerJoueur()
+        {
+            lesJoueurs[indexJoueurCourant].ChangerPoints(carteCourante.RecupererDefense());
+        }
+
+        public void AffaiblirAdverse(int indexCible)
+        {
+            lesJoueurs[indexCible].ChangerPoints(-carteCourante.RecupererDefenseReduite());
         }
     }
 }
