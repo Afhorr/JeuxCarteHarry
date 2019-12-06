@@ -28,14 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_pointsJoueur1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_pointsJoueur2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_pointsJoueur3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl_pointsJoueur4 = new System.Windows.Forms.Label();
             this.lbl_Joueur1 = new System.Windows.Forms.Label();
             this.lbl_Joueur2 = new System.Windows.Forms.Label();
             this.lbl_Joueur3 = new System.Windows.Forms.Label();
@@ -48,107 +40,54 @@
             this.lbl_TypeCarte = new System.Windows.Forms.Label();
             this.lbl_AttaqueCarte = new System.Windows.Forms.Label();
             this.lbl_DefenseCarte = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.GrpBoxCarte = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_Joueur1 = new System.Windows.Forms.Button();
+            this.btn_Joueur2 = new System.Windows.Forms.Button();
+            this.btn_Joueur3 = new System.Windows.Forms.Button();
+            this.btn_Joueur4 = new System.Windows.Forms.Button();
+            this.GrpBoxCarte.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lbl_pointsJoueur1);
-            this.panel1.Location = new System.Drawing.Point(1035, 471);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(130, 181);
-            this.panel1.TabIndex = 0;
-            // 
-            // lbl_pointsJoueur1
-            // 
-            this.lbl_pointsJoueur1.AutoSize = true;
-            this.lbl_pointsJoueur1.Location = new System.Drawing.Point(5, 13);
-            this.lbl_pointsJoueur1.Name = "lbl_pointsJoueur1";
-            this.lbl_pointsJoueur1.Size = new System.Drawing.Size(0, 13);
-            this.lbl_pointsJoueur1.TabIndex = 10;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lbl_pointsJoueur2);
-            this.panel2.Location = new System.Drawing.Point(635, 257);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(181, 130);
-            this.panel2.TabIndex = 1;
-            // 
-            // lbl_pointsJoueur2
-            // 
-            this.lbl_pointsJoueur2.AutoSize = true;
-            this.lbl_pointsJoueur2.Location = new System.Drawing.Point(3, 12);
-            this.lbl_pointsJoueur2.Name = "lbl_pointsJoueur2";
-            this.lbl_pointsJoueur2.Size = new System.Drawing.Size(0, 13);
-            this.lbl_pointsJoueur2.TabIndex = 9;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lbl_pointsJoueur3);
-            this.panel3.Location = new System.Drawing.Point(1043, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(130, 181);
-            this.panel3.TabIndex = 1;
-            // 
-            // lbl_pointsJoueur3
-            // 
-            this.lbl_pointsJoueur3.AutoSize = true;
-            this.lbl_pointsJoueur3.Location = new System.Drawing.Point(14, 16);
-            this.lbl_pointsJoueur3.Name = "lbl_pointsJoueur3";
-            this.lbl_pointsJoueur3.Size = new System.Drawing.Size(0, 13);
-            this.lbl_pointsJoueur3.TabIndex = 11;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.lbl_pointsJoueur4);
-            this.panel4.Location = new System.Drawing.Point(1350, 257);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(181, 130);
-            this.panel4.TabIndex = 1;
-            // 
-            // lbl_pointsJoueur4
-            // 
-            this.lbl_pointsJoueur4.AutoSize = true;
-            this.lbl_pointsJoueur4.Location = new System.Drawing.Point(13, 12);
-            this.lbl_pointsJoueur4.Name = "lbl_pointsJoueur4";
-            this.lbl_pointsJoueur4.Size = new System.Drawing.Size(0, 13);
-            this.lbl_pointsJoueur4.TabIndex = 12;
             // 
             // lbl_Joueur1
             // 
             this.lbl_Joueur1.AutoSize = true;
-            this.lbl_Joueur1.Location = new System.Drawing.Point(1035, 439);
+            this.lbl_Joueur1.Location = new System.Drawing.Point(659, 538);
             this.lbl_Joueur1.Name = "lbl_Joueur1";
-            this.lbl_Joueur1.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Joueur1.Size = new System.Drawing.Size(13, 13);
             this.lbl_Joueur1.TabIndex = 2;
+            this.lbl_Joueur1.Text = "1";
             // 
             // lbl_Joueur2
             // 
             this.lbl_Joueur2.AutoSize = true;
-            this.lbl_Joueur2.Location = new System.Drawing.Point(781, 241);
+            this.lbl_Joueur2.Location = new System.Drawing.Point(405, 340);
             this.lbl_Joueur2.Name = "lbl_Joueur2";
-            this.lbl_Joueur2.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Joueur2.Size = new System.Drawing.Size(13, 13);
             this.lbl_Joueur2.TabIndex = 3;
+            this.lbl_Joueur2.Text = "2";
             // 
             // lbl_Joueur3
             // 
             this.lbl_Joueur3.AutoSize = true;
-            this.lbl_Joueur3.Location = new System.Drawing.Point(1040, 208);
+            this.lbl_Joueur3.Location = new System.Drawing.Point(679, 242);
             this.lbl_Joueur3.Name = "lbl_Joueur3";
-            this.lbl_Joueur3.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Joueur3.Size = new System.Drawing.Size(13, 13);
             this.lbl_Joueur3.TabIndex = 4;
+            this.lbl_Joueur3.Text = "3";
             // 
             // lbl_Joueur4
             // 
             this.lbl_Joueur4.AutoSize = true;
-            this.lbl_Joueur4.Location = new System.Drawing.Point(1347, 241);
+            this.lbl_Joueur4.Location = new System.Drawing.Point(971, 340);
             this.lbl_Joueur4.Name = "lbl_Joueur4";
-            this.lbl_Joueur4.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Joueur4.Size = new System.Drawing.Size(13, 13);
             this.lbl_Joueur4.TabIndex = 5;
+            this.lbl_Joueur4.Text = "4";
             // 
             // txt_RechercheJoueur
             // 
@@ -170,7 +109,7 @@
             // btn_JouerCarte
             // 
             this.btn_JouerCarte.Enabled = false;
-            this.btn_JouerCarte.Location = new System.Drawing.Point(156, 161);
+            this.btn_JouerCarte.Location = new System.Drawing.Point(41, 408);
             this.btn_JouerCarte.Name = "btn_JouerCarte";
             this.btn_JouerCarte.Size = new System.Drawing.Size(108, 23);
             this.btn_JouerCarte.TabIndex = 8;
@@ -181,7 +120,7 @@
             // lbl_NomCarte
             // 
             this.lbl_NomCarte.AutoSize = true;
-            this.lbl_NomCarte.Location = new System.Drawing.Point(1000, 269);
+            this.lbl_NomCarte.Location = new System.Drawing.Point(15, 28);
             this.lbl_NomCarte.Name = "lbl_NomCarte";
             this.lbl_NomCarte.Size = new System.Drawing.Size(35, 13);
             this.lbl_NomCarte.TabIndex = 9;
@@ -190,7 +129,7 @@
             // lbl_CategorieCarte
             // 
             this.lbl_CategorieCarte.AutoSize = true;
-            this.lbl_CategorieCarte.Location = new System.Drawing.Point(976, 291);
+            this.lbl_CategorieCarte.Location = new System.Drawing.Point(16, 54);
             this.lbl_CategorieCarte.Name = "lbl_CategorieCarte";
             this.lbl_CategorieCarte.Size = new System.Drawing.Size(55, 13);
             this.lbl_CategorieCarte.TabIndex = 10;
@@ -199,7 +138,7 @@
             // lbl_TypeCarte
             // 
             this.lbl_TypeCarte.AutoSize = true;
-            this.lbl_TypeCarte.Location = new System.Drawing.Point(996, 314);
+            this.lbl_TypeCarte.Location = new System.Drawing.Point(16, 85);
             this.lbl_TypeCarte.Name = "lbl_TypeCarte";
             this.lbl_TypeCarte.Size = new System.Drawing.Size(34, 13);
             this.lbl_TypeCarte.TabIndex = 10;
@@ -208,7 +147,7 @@
             // lbl_AttaqueCarte
             // 
             this.lbl_AttaqueCarte.AutoSize = true;
-            this.lbl_AttaqueCarte.Location = new System.Drawing.Point(944, 338);
+            this.lbl_AttaqueCarte.Location = new System.Drawing.Point(15, 115);
             this.lbl_AttaqueCarte.Name = "lbl_AttaqueCarte";
             this.lbl_AttaqueCarte.Size = new System.Drawing.Size(86, 13);
             this.lbl_AttaqueCarte.TabIndex = 10;
@@ -217,22 +156,112 @@
             // lbl_DefenseCarte
             // 
             this.lbl_DefenseCarte.AutoSize = true;
-            this.lbl_DefenseCarte.Location = new System.Drawing.Point(935, 362);
+            this.lbl_DefenseCarte.Location = new System.Drawing.Point(15, 142);
             this.lbl_DefenseCarte.Name = "lbl_DefenseCarte";
             this.lbl_DefenseCarte.Size = new System.Drawing.Size(98, 13);
             this.lbl_DefenseCarte.TabIndex = 10;
             this.lbl_DefenseCarte.Text = "Points de défense: ";
             // 
+            // GrpBoxCarte
+            // 
+            this.GrpBoxCarte.Controls.Add(this.lbl_NomCarte);
+            this.GrpBoxCarte.Controls.Add(this.lbl_DefenseCarte);
+            this.GrpBoxCarte.Controls.Add(this.lbl_CategorieCarte);
+            this.GrpBoxCarte.Controls.Add(this.lbl_AttaqueCarte);
+            this.GrpBoxCarte.Controls.Add(this.lbl_TypeCarte);
+            this.GrpBoxCarte.Location = new System.Drawing.Point(1276, 292);
+            this.GrpBoxCarte.Name = "GrpBoxCarte";
+            this.GrpBoxCarte.Size = new System.Drawing.Size(221, 277);
+            this.GrpBoxCarte.TabIndex = 11;
+            this.GrpBoxCarte.TabStop = false;
+            this.GrpBoxCarte.Text = "Carte à jouer";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Location = new System.Drawing.Point(379, 54);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(197, 16);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(715, 62);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 100);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Location = new System.Drawing.Point(1023, 70);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 100);
+            this.groupBox4.TabIndex = 13;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            // 
+            // btn_Joueur1
+            // 
+            this.btn_Joueur1.Location = new System.Drawing.Point(323, 397);
+            this.btn_Joueur1.Name = "btn_Joueur1";
+            this.btn_Joueur1.Size = new System.Drawing.Size(75, 23);
+            this.btn_Joueur1.TabIndex = 14;
+            this.btn_Joueur1.Text = "button1";
+            this.btn_Joueur1.UseVisualStyleBackColor = true;
+            // 
+            // btn_Joueur2
+            // 
+            this.btn_Joueur2.Location = new System.Drawing.Point(323, 434);
+            this.btn_Joueur2.Name = "btn_Joueur2";
+            this.btn_Joueur2.Size = new System.Drawing.Size(75, 23);
+            this.btn_Joueur2.TabIndex = 15;
+            this.btn_Joueur2.Text = "button2";
+            this.btn_Joueur2.UseVisualStyleBackColor = true;
+            // 
+            // btn_Joueur3
+            // 
+            this.btn_Joueur3.Location = new System.Drawing.Point(323, 475);
+            this.btn_Joueur3.Name = "btn_Joueur3";
+            this.btn_Joueur3.Size = new System.Drawing.Size(75, 23);
+            this.btn_Joueur3.TabIndex = 16;
+            this.btn_Joueur3.Text = "button3";
+            this.btn_Joueur3.UseVisualStyleBackColor = true;
+            // 
+            // btn_Joueur4
+            // 
+            this.btn_Joueur4.Location = new System.Drawing.Point(323, 515);
+            this.btn_Joueur4.Name = "btn_Joueur4";
+            this.btn_Joueur4.Size = new System.Drawing.Size(75, 23);
+            this.btn_Joueur4.TabIndex = 17;
+            this.btn_Joueur4.Text = "button4";
+            this.btn_Joueur4.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1556, 764);
-            this.Controls.Add(this.lbl_DefenseCarte);
-            this.Controls.Add(this.lbl_AttaqueCarte);
-            this.Controls.Add(this.lbl_TypeCarte);
-            this.Controls.Add(this.lbl_CategorieCarte);
-            this.Controls.Add(this.lbl_NomCarte);
+            this.ClientSize = new System.Drawing.Size(1607, 764);
+            this.Controls.Add(this.btn_Joueur4);
+            this.Controls.Add(this.btn_Joueur3);
+            this.Controls.Add(this.btn_Joueur2);
+            this.Controls.Add(this.btn_Joueur1);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GrpBoxCarte);
             this.Controls.Add(this.btn_JouerCarte);
             this.Controls.Add(this.btn_RechercheJoueur);
             this.Controls.Add(this.txt_RechercheJoueur);
@@ -240,32 +269,18 @@
             this.Controls.Add(this.lbl_Joueur3);
             this.Controls.Add(this.lbl_Joueur2);
             this.Controls.Add(this.lbl_Joueur1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.GrpBoxCarte.ResumeLayout(false);
+            this.GrpBoxCarte.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbl_Joueur1;
         private System.Windows.Forms.Label lbl_Joueur2;
         private System.Windows.Forms.Label lbl_Joueur3;
@@ -273,15 +288,20 @@
         private System.Windows.Forms.TextBox txt_RechercheJoueur;
         private System.Windows.Forms.Button btn_RechercheJoueur;
         private System.Windows.Forms.Button btn_JouerCarte;
-        private System.Windows.Forms.Label lbl_pointsJoueur1;
-        private System.Windows.Forms.Label lbl_pointsJoueur2;
-        private System.Windows.Forms.Label lbl_pointsJoueur3;
-        private System.Windows.Forms.Label lbl_pointsJoueur4;
         private System.Windows.Forms.Label lbl_NomCarte;
         private System.Windows.Forms.Label lbl_CategorieCarte;
         private System.Windows.Forms.Label lbl_TypeCarte;
         private System.Windows.Forms.Label lbl_AttaqueCarte;
         private System.Windows.Forms.Label lbl_DefenseCarte;
+        private System.Windows.Forms.GroupBox GrpBoxCarte;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btn_Joueur1;
+        private System.Windows.Forms.Button btn_Joueur2;
+        private System.Windows.Forms.Button btn_Joueur3;
+        private System.Windows.Forms.Button btn_Joueur4;
     }
 }
 

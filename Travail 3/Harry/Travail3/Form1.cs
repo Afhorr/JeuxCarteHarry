@@ -131,5 +131,10 @@ namespace Travail3
         {
            
         }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
