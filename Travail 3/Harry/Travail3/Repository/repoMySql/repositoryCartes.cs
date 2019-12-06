@@ -37,6 +37,10 @@ namespace Travail3.Repository
                 readerCarte = commandCarte.ExecuteReader();
                 if (readerCarte.Read())
                 {
+                    if (Convert.ToInt32(readerCarte["pointsDefense"]) != 0)
+                    {
+                        carte = new CarteDefense();
+                    }
                     carte.AssignerAttaque(Convert.ToInt32(readerCarte["pointsMin"]), Convert.ToInt32(readerCarte["pointsMax"]));
                     carte.AssignerDefense(Convert.ToInt32(readerCarte["pointsDefense"]));
                     carte.AssignerValeurAntidote(readerCarte["nomAntidote"].ToString(), Convert.ToInt32(readerCarte["pointsAntidote"]));

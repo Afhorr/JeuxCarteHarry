@@ -27,6 +27,11 @@ namespace Travail3
             carteCourante = leRepositoryCartes.PrendreCarte();
         }
 
+        public string NomCarteCourante()
+        {
+            return carteCourante.RecupererNomCarte();
+        }
+
         public int AttaqueCarteCourante()
         {
             return carteCourante.RecupererAttaque();
@@ -35,6 +40,18 @@ namespace Travail3
         public int DefenseCarteCourante()
         {
             return carteCourante.RecupererDefense();
+        }
+
+        public string TypeCarteCourante()
+        {
+            if(carteCourante.RecupererAttaque() == 0)
+            {
+                return "Defense";
+            }
+            else
+            {
+                return "Attaque";
+            }
         }
 
         public int AntidoteCarteCourante()
@@ -104,6 +121,11 @@ namespace Travail3
         {
             indexJoueurCourant = ((indexJoueurCourant + 1) % 4);
             joueurCourant = lesJoueurs[indexJoueurCourant];
+        }
+
+        public int RecupererPointsJoueur(int positionJoueur)
+        {
+            return lesJoueurs[positionJoueur].pointsJoueur;
         }
     }
 }

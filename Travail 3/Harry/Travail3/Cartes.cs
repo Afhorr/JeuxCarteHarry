@@ -36,6 +36,11 @@ namespace Travail3
             categorieCarte = categorie;
         }
 
+        public string RecupererNomCarte()
+        {
+            return nomCarte;
+        }
+
         public string RecupererNomCategorie()
         {
             return categorieCarte.RecupererNom();

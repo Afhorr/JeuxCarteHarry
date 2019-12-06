@@ -72,21 +72,31 @@ namespace Travail3
             }
             else if (nomJoueur != "")
             {
-
                 int positionJoueur = gestionJeu.PositionNouveauJoueur();
-                AfficherJoueur(positionJoueur, nomJoueur);
+                int pointsJoueur = gestionJeu.RecupererPointsJoueur(positionJoueur);
+                AfficherJoueur(positionJoueur, nomJoueur, pointsJoueur);
             }
         }
 
         private void Btn_JouerCarte_Click(object sender, EventArgs e)
         {
-
-            //MessageBox.Show(gestionJeu.JouerCarte());
+            gestionJeu.JouerCarte();
+            AfficherInfoCarte();
         }
 
-        public void AfficherJoueur(int positionJoueur, string nomJoueur)
+        public void AfficherInfoCarte()
+        {
+            lbl_NomCarte.Text = "Nom: " + gestionJeu.NomCarteCourante();
+            lbl_CategorieCarte.Text = "Categorie: " + gestionJeu.CategorieCarteCourante();
+            lbl_AttaqueCarte.Text = "Points d'attaque: " + gestionJeu.AttaqueCarteCourante();
+            lbl_DefenseCarte.Text = "Points de défense: " + gestionJeu.DefenseCarteCourante();
+            lbl_TypeCarte.Text = "Type: " + gestionJeu.TypeCarteCourante();
+        }
+
+        public void AfficherJoueur(int positionJoueur, string nomJoueur, int pointsJoueur)
         {
             lesLabelsJoueurs[positionJoueur].Text = nomJoueur;
+            lesLabelsPoints[positionJoueur].Text = "Points: " + pointsJoueur.ToString();
         }
 
         void ViderLabel()
